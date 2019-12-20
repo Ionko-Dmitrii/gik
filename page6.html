@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900i&display=swap&subset=cyrillic"
+          rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/uikit.min.css">
+    <title>Предварительный калькулятор</title>
+</head>
+<body>
+<header class="header">
+    <div class="navigation">
+        <div class="logo">
+            <img src="styles/img/svg/logo-ru.svg" alt="load">
+        </div>
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="nav-overlay uk-navbar-left">
+                <div class="nav ">
+                    <ul>
+                        <li class="active"><a href="#">О компании</a></li>
+                        <li><a href="#">Деятельность</a></li>
+                        <li><a href="#">Участники</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-overlay uk-navbar-right">
+                <div class="search">
+                    <div class="uk-inline">
+                        <button class="uk-button" type="button"><a class="dropdown" href="#">RU</a></button>
+                        <div uk-dropdown="mode: click">
+                            <div><a class="dropdown" href="#">EN</a></div>
+                            <div><a class="dropdown" href="">KG</a></div>
+                        </div>
+                    </div>
+                </div>
+                <a class="uk-navbar-toggle" uk-search-icon
+                   uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+
+                <div class="nav_mobil">
+                    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">
+                        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#"></a>
+                    </button>
+
+                    <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+                        <div class="uk-offcanvas-bar">
+                            <button class="uk-offcanvas-close" type="button" uk-close></button>
+                            <p>меню</p>
+                            <hr>
+                            <ul>
+                                <li><a href="#">О компании</a></li>
+                                <hr>
+                                <li><a href="#">Деятельность</a></li>
+                                <hr>
+                                <li><a href="#">Участники</a></li>
+                                <hr>
+                                <li><a href="#">Партнеры</a></li>
+                                <hr>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                            <div class="div">
+                                <button class="uk-button active" type="button"><a class="dropdown" href="#">Ru</a>
+                                </button>
+                                <button class="uk-button" type="button"><a class="dropdown" href="#">En</a></button>
+                                <button class="uk-button" type="button"><a class="dropdown" href="#">Kgz</a></button>
+                            </div>
+                            <div class="div2">
+                                <button class="button">
+                                    <a href="#">Подать заявку</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+                <div class="uk-navbar-item uk-width-expand">
+                    <form class="uk-search uk-search-navbar uk-width-1-1">
+                        <input class="uk-search-input" type="search" placeholder="Поиск" autofocus>
+                    </form>
+                </div>
+                <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade"
+                   href="#"></a>
+            </div>
+        </nav>
+        <button class="button">
+            <a href="#">Подать заявку</a>
+        </button>
+    </div>
+</header>
+<section class="section_four">
+    <div class="container">
+        <div class="way">
+            <a href="#">Главная</a>
+            <i>/</i>
+            <a href="#">участники</a>
+            <i>/</i>
+            <span>Требование</span>
+        </div>
+        <h2>Ипотечный калькулятор</h2>
+        <div class="section_four_group">
+            <div class="section_four_group_one">
+                <div class="section_four_group_one1">
+
+                    <div class="slidecontainer">
+                        <div class="section_four_heading">
+                            <h5>Стоимость приобретаемого жилья</h5>
+                            <p><span id="demo"></span> сом</p>
+                        </div>
+                        <input type="range" min="500000" max="9000000" step="100000" value="0" class="slider"
+                               id="myRange">
+                        <div id="test"></div>
+                        <div class="section_four_heading2">
+                            <p>100 000</p>
+                            <p>9 000 000</p>
+                        </div>
+                    </div>
+                    <div class="slidecontainer">
+                        <div class="section_four_heading">
+                            <h5>Первоначальный взнос по приобретаемому жилью</h5>
+                            <p><span id="demo2"></span> сом</p>
+                        </div>
+                        <input type="range" step="1000" min="50000" max="5000000" value="0" class="slider"
+                               id="myRange2">
+                        <div id="test2"></div>
+                    </div>
+                    <div class="slidecontainer">
+                        <div class="section_four_heading">
+                            <h5>Процентная ставка по кредиту (% годовых)</h5>
+                            <p><span id="demo3"></span> %</p>
+                        </div>
+                        <input type="range" step="0.1" min="6" max="14" value="0" class="slider" id="myRange3">
+                        <div id="test3"></div>
+                    </div>
+                    <div class="slidecontainer">
+                        <div class="section_four_heading">
+                            <h5>Срок кредита</h5>
+                            <p><span id="demo4"></span> лет</p>
+                        </div>
+                        <input type="range" min="5" step="1" max="15" value="0" class="slider" id="myRange4">
+                        <div id="test4"></div>
+                        <div class="section_four_heading2">
+                            <p>5 лет</p>
+                            <p>15 лет</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section_four_group_two">
+                <h5>Ставка по кредиту</h5>
+                <h1 id="credit"></h1>
+                <h5>Ежемесячный платеж</h5>
+                <h2 id="month"></h2>
+                <h5>Сумма кредита</h5>
+                <h2 id="sum_credit"></h2>
+                <button class="section_one_button1">
+                    <a href="#">Рассчитать подробнее</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="table">
+    <div class="container">
+        <table>
+            <tr>
+                <th>№</th>
+                <th>ГОД / МЕСЯЦ (КОЛ-ВО ДНЕЙ)</th>
+                <th>РАЗМЕР ЕЖЕМЕСЯЧНОГО ВЗНОСА</th>
+                <th>В ПОГАШЕНИЕ ДОЛГА</th>
+                <th>В ПОГАШЕНИЕ ПРОЦЕНТОВ</th>
+                <th>ОСТАТОК ДОЛГА ПОСЛЕ ПЛАТЕЖА</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>  <tr>
+            <td>...</td>
+            <td>....</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+        </tr>
+            <tr>
+                <td>118</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>119</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td>120</td>
+                <td>Январь 2020 (31)</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Итого</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td>14 520.15</td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+
+</section>
+<footer class="footer">
+    <div class="footer_background1">
+        <div class="container">
+            <div class="footer_background_one">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Id lorem arcu quis ut urna. Vel dignissim aliquam mollis viverra massa,
+                    dictum cursus.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Id lorem arcu quis ut urna. Vel dignissim aliquam mollis viverra massa,
+                    dictum cursus.
+                </p>
+                <div>
+                    <h4>Присоединяйтесь к нам в социальных сетях</h4>
+                    <a href="#"><img src="styles/img/png/facebook_icon_40px.png" alt="load"></a>
+                    <a href="#"><img src="styles/img/png/instagram_icon_41px.png" alt="load"></a>
+                    <a href="#"><img src="styles/img/png/twitter_icon_42px.png" alt="load"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_background2">
+        <div class="container">
+            <div class="footer_background_two">
+                <div>
+                    <img src="styles/img/png/logo_2.png" alt="load">
+                </div>
+                <a href="#"><p>сайт разработан Sunrise studio</p></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/uikit.min.js"></script>
+<script src="js/uikit-icons.min.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>
